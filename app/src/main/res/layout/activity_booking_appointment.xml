@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/BookingAppointment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFE4E1"
@@ -34,7 +35,7 @@
     </RelativeLayout>
 
     <View
-        android:id="@+id/view"
+        android:id="@+id/divider"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginTop="5dp"
@@ -54,7 +55,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.003"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view" />
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
 
     <CalendarView
         android:id="@+id/appointmentCalendar"
@@ -84,19 +85,29 @@
         app:layout_constraintTop_toBottomOf="@+id/appointmentCalendar" />
 
 
-    <Spinner
-        android:id="@+id/timeSpinner"
+    <RadioGroup
+        android:id="@+id/RGTime"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:spinnerMode="dropdown"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvSelectTime"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="444dp" />
+        app:layout_constraintTop_toBottomOf="@+id/tvSelectTime">
+
+        <RadioButton
+            android:id="@+id/MorningOption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="09:00 AM - 11:00 AM" />
+
+        <RadioButton
+            android:id="@+id/EveningOption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="14:00 PM - 16:00 PM" />
+    </RadioGroup>
 
     <TextView
         android:id="@+id/tvSelectMedium"
@@ -110,7 +121,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/timeSpinner" />
+        app:layout_constraintTop_toBottomOf="@+id/RGTime" />
 
     <RadioGroup
         android:id="@+id/mediumRadioGroup"
@@ -156,5 +167,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/ProgressBar"
+        android:layout_width="52dp"
+        android:layout_height="58dp"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

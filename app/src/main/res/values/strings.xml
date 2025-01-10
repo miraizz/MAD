@@ -2,9 +2,23 @@
     <string name="app_name">SISTERLYAPP</string>
     <!-- TODO: Remove or change this placeholder text -->
 
-    <string-array name="appointment_times">
+    <!-- Time Options -->
+    <string-array name="time_options">
         <item>09:00 - 11:00</item>
         <item>14:00 - 16:00</item>
+    </string-array>
+
+    <!-- Counseling Type Options -->
+    <string-array name="counseling_types">
+        <item>Physical Violence</item>
+        <item>Sexual Harassment</item>
+        <item>Sexual Assault</item>
+        <item>Domestic Violence</item>
+        <item>Psychological Abuse</item>
+        <item>Stalking</item>
+        <item>Discrimination at Workplace</item>
+        <item>Forced Marriage</item>
+        <item>Child Marriage</item>
     </string-array>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
